@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    font-size: 62.5%;
+}
+
+#app{
+    width: 70%;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0px 0px 27px 8px rgba(59, 153, 252, .7);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* #region Header */
+#app-header{
+    height: 100px;
+    background: #f4f4f4;
+    border-bottom: solid 1px lightgray;
+    text-align: center;
+}
+
+/** copied from internet **/
+select {
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+	width: 70%;
+	max-width: 70%;
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+select::-ms-expand {
+	display: none;
+}
+select:hover {
+	border-color: #888;
+}
+select:focus {
+	border-color: #aaa;
+	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	color: #222;
+	outline: none;
+}
+select option {
+	font-weight:normal;
+}
+#app-header-list{
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+/** copied from internet **/
+/* #endregion */
+
+/* #region Container */
+#app-container{
+    height: 80%;
+    flex: 2 1 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+#app-container-repo{
+    width: 45%;
+    margin: 10px;
+}
+
+#app-container-repo-box{
+    background-color: #f4f4f4;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+tr{
+    vertical-align: top;
+}
+
+th{
+    font-weight: bold;
+}
+
+#app-container-contributors{
+    height: 100%;
+    width: 45%;
+    margin: 10px;
+}
+
+#app-container-contributors-box{
+    background-color: #f4f4f4;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+#app-container-contributors-box > div{
+    border-bottom: 1px solid lightgray;
+}
+
+#app-container-contributors-box > div:last-child{
+    /* border-bottom: none; */
+    border-radius: 4px;
+}
+
+.app-container-contributors-box-list{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-container-contributors-box-list-img{
+    margin: 5px;
+    width: 50px;
+    /* display: inline-block; */
+    
+}
+
+.app-container-contributors-box-list-name{
+    margin-right: auto;
+}
+
+#app-container-contributors-pagination {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#app-container-contributors-pagination button {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+#app-container-contributors-pagination button.active {
+    background-color: #0083cf;
+    color: white;
+    border: 1px solid #0083cf;
+    outline: none;
+}
+
+#app-container-contributors-pagination button:focus {
+    outline: none;
+}
+
+#app-container-contributors-pagination button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+#app-container-failed{
+    color: red;
+}
+/* #endregion */
+
+/* #region Footer */
+#app-footer{
+    height: 50px;
+    border-top: solid 1px lightgray;
+    background: #f4f4f4;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region Fonts */
+h1{
+    font-size: 1.4rem;
+    margin: .6em 0 .2em 0;
+}
+
+h2{
+    font-size: 1.1rem;
+    margin: .6em 0 .2em 0;
+}
+
+h3{
+    font-size: .9rem;
+    margin: .3em 0 0 .3em;
+}
+
+h4{
+    font-size: .9rem;
+    font-weight: normal;
+    margin: .3em 0 0 .3em;
+}
+
+h5{
+    font-size: .9rem;
+    margin: 0 1.5em 0 .3em;
+}
+
+h6{
+    font-size: 1rem;
+    margin: .8em 0;
+    letter-spacing: 8px;
+}
+/* #endregion */
+
+/* #region Media Query */
+/** For mobile and Tablet **/
+@media only screen and (max-width: 1024px) {
+
+    html, body{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #app-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #app-container-repo{
+        width: 90%;
+    }
+
+    #app-container-contributors{
+        width: 90%;
+    }
+
+    h6{
+        letter-spacing: 2px;
+    }
+
+
+}
+/** For mobile and Tablet **/
+
+/** For mobile **/
+@media only screen and (max-width: 600px) {
+
+    #app{
+        width: 90%;
+    }
+}
+/** For mobile **/
+
+/** For Tablets **/
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    #app{
+        width: 80%;
+    }
+
+}
+/** For Tablets **/
+
+/** For Desktop **/
+@media only screen and (min-width: 1024px) {
+
+    html, body {
+        height: 100%;
+    }
+
+    #app{
+        height: 90%;
+    }
+
+    #app-container-contributors-box{
+        /* height: auto;
+        max-height: 90%;
+        overflow: auto; */
+        height: 305px;
+    }
+
+}
+/** For Desktop **/
+
+/** For Desktop when height bellow 800px **/
+@media only screen and (max-height: 800px) and (min-width: 1024px) {
+
+    html, body {
+        height: 800px;
+    }
+
+}
+/** For Desktop when height bellow 800px **/
+
+/* #endregion */
+
+
+
+

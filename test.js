@@ -1,0 +1,1 @@
+const obj = {name:"ssss", age: 10}
