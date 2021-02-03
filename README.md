@@ -1,5 +1,5 @@
 ## About The Project
-Retrieve HackYourFuture repositories data from GitHub API to and display it in a web page using Vanilla JavaScript.
+Retrieve HackYourFuture repositories data from GitHub API and display it in a web page using Vanilla JavaScript.
 
 ## Link
 https://oudy94.github.io/HackYourRepo/index.html
